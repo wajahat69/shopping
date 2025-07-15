@@ -7,7 +7,7 @@ from sklearn.preprocessing import LabelEncoder, StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 
-TEST_SIZE = 0.7
+TEST_SIZE = 0.4
 
 
 def main():
