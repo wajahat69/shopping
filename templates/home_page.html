@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Revenue Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f3f3;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            margin: auto;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        form input, form select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        button {
+            background: #3498db;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            width: 100%;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Shopping Revenue Prediction</h2>
+        <form action="/predict" method="post">
+            <label>Product Related:</label>
+            <input type="number" name="product_related" required>
+
+            <label>Product Related Duration:</label>
+            <input type="number" step="any"  name="product_related_duration" required>
+
+            <label>Page Values:</label>
+            <input type="number" step="any" name="page_values" required>
+
+            <label>Bounce Rates:</label>
+            <input type="number" step="any" name="bounce_rates" required>
+
+            <label>Exit Rates:</label>
+            <input type="number" step="any" name="exit_rates" required>
+
+            <label>Special Day:</label>
+            <input type="number" step="any" name="special_day" required>
+
+            <label>Month:</label>
+            <select name="month" required>
+                <option value="">Select Month</option>
+                <option>January</option>
+                <option>February</option>
+                <option>March</option>
+                <option>April</option>
+                <option>May</option>
+                <option>June</option>
+                <option>July</option>
+                <option>August</option>
+                <option>September</option>
+                <option>October</option>
+                <option>November</option>
+                <option>December</option>
+            </select>
+
+            <label>Weekend:</label>
+            <select name="weekend" required>
+                <option value="">Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label>Visitor Type:</label>
+            <select name="visitor_type" required>
+                <option value="">Select</option>
+                <option>Returning Visitor</option>
+                <option>New Visitor</option>
+            </select>
+
+            <button type="submit">Predict Revenue</button>
+        </form>
+    </div>
+</body>
+</html>

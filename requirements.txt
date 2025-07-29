@@ -1,0 +1,9 @@
+fastapi
+jinja2
+joblib
+pandas
+numpy
+httpx
+python-multipart
+supabase
+mangum  # Lambda adapter for FastAPI
