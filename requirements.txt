@@ -1,9 +1,9 @@
 fastapi
+mangum
 jinja2
 joblib
-pandas
 numpy
-httpx
-python-multipart
+pandas
+scikit-learn
 supabase
-mangum  # Lambda adapter for FastAPI
+python-multipart

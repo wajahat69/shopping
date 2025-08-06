@@ -45,24 +45,24 @@
 <body>
     <div class="container">
         <h2>Shopping Revenue Prediction</h2>
-        <form action="/predict" method="post">
+        <form action="https://b0s4fk5rz5.execute-api.us-east-1.amazonaws.com/predict" method="post">
             <label>Product Related:</label>
-            <input type="number" name="product_related" required>
+            <input type="number" name="product_related" required min="0">
 
             <label>Product Related Duration:</label>
-            <input type="number" step="any"  name="product_related_duration" required>
+            <input type="number" step="any"  name="product_related_duration" required min="0">
 
             <label>Page Values:</label>
-            <input type="number" step="any" name="page_values" required>
+            <input type="number" step="any" name="page_values" required min="0">
 
             <label>Bounce Rates:</label>
-            <input type="number" step="any" name="bounce_rates" required>
+            <input type="number" step="any" name="bounce_rates" required min="0">
 
             <label>Exit Rates:</label>
-            <input type="number" step="any" name="exit_rates" required>
+            <input type="number" step="any" name="exit_rates" required min="0">
 
             <label>Special Day:</label>
-            <input type="number" step="any" name="special_day" required>
+            <input type="number" step="any" name="special_day" required min="0" max ="1">
 
             <label>Month:</label>
             <select name="month" required>

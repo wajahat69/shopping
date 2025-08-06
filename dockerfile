@@ -1,14 +1,18 @@
-FROM public.ecr.aws/lambda/python:3.11
+# ✅ Use official Lambda base image
+FROM public.ecr.aws/lambda/python:3.9
 
-# Copy your requirements and app
+# ✅ Set working directory (optional but fine)
+WORKDIR /var/task
+
+# ✅ Install dependencies
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
-# Copy your FastAPI app code
+# ✅ Copy all files (this includes app.py, templates/, model files, etc.)
+
 COPY . .
 
-# Install required packages for FastAPI + Jinja
-RUN pip install fastapi uvicorn jinja2 joblib numpy pandas
 
-# Set handler (AWS Lambda expects a handler format file.function)
-CMD ["main.handler"]
+
+# ✅ Set the Lambda handler
+CMD ["app.app.handler"]
